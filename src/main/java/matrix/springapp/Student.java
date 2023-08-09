@@ -28,4 +28,10 @@ public class Student extends Person{
     public void setSurname(String surname) {
         this.surname = surname;
     }
+
+    public void initMethod(){
+        System.out.println("This is init method");
+    }
+
+
 }

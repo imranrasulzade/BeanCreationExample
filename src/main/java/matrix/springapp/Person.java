@@ -28,4 +28,9 @@ public class Person {
     public void setSurname(String surname) {
         this.surname = surname;
     }
+
+    public void foo(){
+        System.out.println("Foo method called");
+    }
+
 }

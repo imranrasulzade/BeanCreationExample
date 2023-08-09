@@ -58,5 +58,8 @@ public class SpringAppApplication implements CommandLineRunner {
         System.out.println(person3.getName());
         System.out.println(person3.getSurname());
 
+        Person personnn = (Person) context1.getBean("student");
+        personnn.foo();
+
     }
 }

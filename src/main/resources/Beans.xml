@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="student" class="matrix.springapp.Student" scope="prototype">
+    <bean id="student" class="matrix.springapp.Student" scope="prototype" parent="person" init-method="initMethod">
         <property name="id" value="1"></property>
         <property name="name" value="Imran"></property>
         <property name="surname" value="Rasulzade"></property>

@@ -1,14 +1,15 @@
 package matrix.springapp;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class MyConfig {
-    @Bean(name = "student")
+    @Bean(name = "student", initMethod = "initMethod")
     @Scope("prototype")
-    public Student getStudent(){
+    public Student getStudent(@Qualifier("person") Person person){
         Student student = new Student();
         student.setId(1);
         student.setName("Imran");
